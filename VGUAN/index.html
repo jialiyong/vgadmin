@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>微观传播</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="container">
+       <div class="vg_header">
+            <div class="vg_header_logo fl">
+                <a href="#">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+           <div class="vg_header_right fr">
+               <div class="vg_header_phone fl">
+                   <span>客服电话：</span>
+                   <span>400-890-617</span>
+               </div>
+               <div class="vg_header_account fr">
+                   <a href="#" class="layui-btn layui-btn-danger  layui-btn-small">我的账户</a>
+                   <a href="#" class="">退出</a>
+               </div>
+           </div>
+        </div>
+       <div class="vg_body clearfix">
+           <div class="vg_aside">
+               <div class="vg_aside_accountnum">
+                    <div class="vg_aside_accountnum_title">
+                        <div class="cir"></div>
+                        <h3>账号信息</h3>
+                    </div>
+                    <div class="vg_aside_accountnum_main">
+                        <div class="vg_aside_accountnum_main_user">
+                            <span class="fa fa-user-o"></span>
+                            <span>用户名：</span>
+                            <span>jdjdjdj</span>
+                        </div>
+                        <div class="vg_aside_accountnum_main_phone">
+                            <span class="fa fa-mobile"></span>
+                            <span>手机号：</span>
+                            <span>13966666666</span>
+                            <a href="#" class="layui-btn layui-btn-danger layui-btn-mini fr" id="resetphone">更换手机号</a>
+                        </div>
+                        <div class="vg_aside_accountnum_main_idcard">
+                            <span class="fa fa-id-card"></span>
+                            <span>身份验证：</span>
+                            <span>未完成</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">去验证</a>
+                        </div>
+                    </div>
+                </div>
+               <div class="vg_aside_account">
+                   <div class="vg_aside_account_title">
+                       <div class="cir"></div>
+                       <h3>账户信息</h3>
+                   </div>
+                   <div class="vg_aside_account_main">
+                       <div class="vg_aside_account_main_usertype">
+                           <span class="fa fa-user-o"></span>
+                           <span>账户类型：</span>
+                           <span>普通账户</span>
+                           <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">升级</a>
+                       </div>
+                       <div class="vg_aside_account_main_livetime">
+                           <span class="fa fa-clock-o"></span>
+                           <span>可直播时间：</span>
+                           <span>600</span>
+                           <span>分钟</span>
+                           <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">购买</a>
+                       </div>
+                       <div class="vg_aside_account_main_timevalidity">
+                           <span class="fa fa-clock-o"></span>
+                           <span>分钟有效期：</span>
+                           <span>2017-02-02</span>
+                       </div>
+                       <div class="vg_aside_account_main_balance">
+                           <span class="fa fa-user-o"></span>
+                           <span>账户余额：</span>
+                           <span>0.00</span>
+                           <span>元</span>
+                           <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">充值</a>
+                       </div>
+                   </div>
+               </div>
+               <div class="vg_aside_setting">
+                   <div class="vg_aside_setting_title">
+                       <div class="cir"></div>
+                       <h3>安全设置</h3>
+                   </div>
+                   <div class="vg_aside_setting_main">
+                       <div class="vg_aside_setting_main_username">
+                           <span class="fa fa-lock" style="color: #cccccc"></span>
+                           <span>密码管理</span>
+                           <a href="#" id="rplcpassword" class="layui-btn layui-btn-primary layui-btn-mini fr">修改密码</a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="vg_index">
+               <div class="vg_index_main">
+                   <div class="vg_index_main_title">
+                        <div class="vg_index_main_title_list">
+                            <div class="vg_index_main_title_list_ico">
+                            </div>
+                            <p>直播列表</p>
+                        </div>
+                       <div class="vg_index_main_title_addlive">
+                           <a href="#">
+                               <div class="vg_index_main_title_addlive_ico"></div>
+                               <p>创建直播</p>
+                           </a>
+                       </div>
+                   </div>
+                   <div class="vg_index_main_body">
+                       <p class="vg_index_main_body_title">暂无直播</p>
+                       <div class="vg_index_main_body_addlive">
+                           <a href="#">
+                              <div class="vg_index_main_body_addlive_ico"></div>
+                               <p>创建新直播</p>
+                           </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</body>
+<!--更换手机弹出窗-->
+<div class="phonemark">
+    <div class="phonebox">
+        <div class="phoneboxtitle">
+            <p>更换手机号</p>
+            <span id="closerplcphone">&times;</span>
+        </div>
+        <div class="phoneboxmain">
+            <form class="layui-form" action="">
+                <div class="">
+                    <label class="">您当前的手机号：</label>
+                    <div class="layui-input-inline">
+                        <p>132531396400</p>
+                    </div>
+                </div>
+                <div class="newphone">
+                    <p>请输入您的新号码：</p>
+                    <input type="text" id="newphone" class="layui-input">
+                    <p class="newphonered">*请输入正确的手机号码！</p>
+                </div>
+                <div class="code">
+                    <p>请输入验证码:</p>
+                    <input type="text" id="phonecode" class="layui-input">
+                    <a href="javascript:;" id="phone_send" class="phone_send">发送验证码</a>
+                    <p class="codered">*请输入验证码</p>
+                </div>
+                <div class="phoneboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="phonemarsubkbtn">提交</button>
+                    <button class="layui-btn layui-btn-primary" id="closerplcphonebtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--密码修改-->
+<div class="passmark">
+    <div class="passbox">
+        <div class="passboxtitle">
+            <p>修改密码</p>
+            <span id="closerplcpass">&times;</span>
+        </div>
+        <div class="passboxmain">
+            <form action="">
+                <div class="nowpass">
+                    <p>请输入您的旧密码：</p>
+                    <input type="password" id="nowpass" class="layui-input">
+                    <p class="nowpassred">*请输入旧密码！</p>
+                </div>
+                <div class="newpass">
+                    <p>请输入您的新密码：</p>
+                    <input type="password" id="newpass" class="layui-input">
+                    <p class="newpassred">*请输入新密码！</p>
+                </div>
+                <div class="tonewpass">
+                    <p>请确认您的新密码：</p>
+                    <input type="password" id="tonewpass" class="layui-input">
+                    <p class="tonewpassred">*请再次输入新密码！</p>
+                </div>
+                <div class="passboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="passsubbtn">确认</button>
+                    <button class="layui-btn layui-btn-primary" id="closepassbtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/layui/lay/dest/layui.all.js"></script>
+<script>
+    //更换手机号
+    $("#resetphone").on("click",function () {
+        $(".phonemark").fadeIn();
+    })
+    $("#closerplcphone").on("click",function () {
+        $("#newphone").val("")
+        $("#phonecode").val("");
+        $(".phonemark").fadeOut();
+    })
+    $("#closerplcphonebtn").on("click",function () {
+        $("#newphone").val("")
+        $("#phonecode").val("");
+        $(".phonemark").fadeOut();
+        return false;
+    })
+    //发送验证码
+    var a = 0;
+    $(".phone_send").click(function () {
+        if(a==0){
+            a= 1;
+            var newphone = $("#newphone").val();
+            if(newphone == ""){
+                $(".newphonered").html("*请输入手机号 ").fadeIn().delay(2000).fadeOut();
+                a=0;
+                return false;
+            }else {
+                var preg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if (!preg.test(newphone)) {
+                    $(".newphonered").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
+                    a=0;
+                    return false;
+                }
+            }
+            $.ajax({
+                url:'',
+                type:'post',
+                data:{ "mobile": newphone},
+                success:function (res) {
+                    var time = 60;
+                    var phone_send = $("#phone_send");
+                    phone_send.addClass("phone_down");
+                    var set = setInterval(function() {
+                        time--;
+                        phone_send.html(time+"s重新发送");
+                        if(time == 0) {
+                            a=0;
+                            phone_send.removeClass("phone_down").html("发送验证码");
+                            clearInterval(set);
+                        }
+                    }, 1000);
+                }
+            })
+        }
+    })
+    $("#phonemarsubkbtn").on("click",function () {
+        var newphone = $("#newphone").val();
+        var phonecode = $("#phonecode").val();
+        if (newphone==""){
+            $(".newphonered").html("*请输入手机号 ").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(phonecode==""){
+            $(".codered").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+        //在此发送ajax
+        $("#newphone").val("")
+        $("#phonecode").val("");
+        $(".phonemark").fadeOut();
+        $(".promptmark").fadeIn();
+        return false;
+    })
+
+//    $("#resetphone").on("click",function () {
+//        layer.open({
+//            type: 1,
+//            title:['更换手机号码', 'font-size:18px;'],
+//            area: ['420px', '300px'], //宽高
+//            btn: ['确定','取消'],
+//            btnAlign: 'c',
+//            skin:'btncolor',
+//            content: ' <input type="text" id="asd"><p>aa</p>',
+//            yes:function (index) {
+//                var aa = $("#asd").val();
+//                alert(aa);
+//                layer.close(index);
+//            }
+//        });
+//    })
+    //修改密码
+    $("#rplcpassword").on("click",function () {
+        $(".passmark").fadeIn();
+    })
+    $("#closerplcpass").on("click",function () {
+        $(".passmark").fadeOut();
+        $("#nowpass").val("");
+        $("#tonewpass").val("");
+        $("#newpass").val("");
+    })
+    $("#closepassbtn").on("click",function () {
+        $(".passmark").fadeOut();
+        $("#nowpass").val("");
+        $("#tonewpass").val("");
+        $("#newpass").val("");
+    })
+
+
+    $("#nowpass").blur(function(){
+        var password = $("#nowpass").val();
+        if(password==""){
+            $(".nowpassred").html("*请输入您的密码！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#newpass").blur(function(){
+        var password = $("#newpass").val();
+        var passreg = /^.{6,20}$/;
+        if(password==""){
+            $(".newpassred").html("*请输入您的密码！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!passreg.test(password)){
+            $(".newpassred").html("*请输入长度为6-20位的密码！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#tonewpass").blur(function(){
+        var tonewpass = $("#tonewpass").val();
+        var newpass = $("#newpass").val();
+        if(newpass!=tonewpass){
+            $(".tonewpassred").html("*您输入的两次密码不一致！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+
+    $("#passsubbtn").on("click",function () {
+        var nowpass = $("#nowpass").val();
+        var tonewpass = $("#tonewpass").val();
+        var newpass = $("#newpass").val();
+        var passreg = /^.{6,20}$/;
+        if(nowpass==""){
+            $(".nowpassred").html("*请输入您的密码！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(newpass==""){
+            $(".newpassred").html("*请输入您的密码！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!passreg.test(newpass)){
+            $(".newpassred").html("*请输入长度为6-20位的密码！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(newpass!=tonewpass){
+            $(".tonewpassred").html("*您输入的两次密码不一致！").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else {
+            //发送ajax
+
+            $("#nowpass").val("");
+            $("#tonewpass").val("");
+            $("#newpass").val("");
+            $(".passmark").fadeOut();
+            $(".promptmark").fadeIn();
+            return false;
+        }
+
+    })
+    var aaa = "nihao";
+    layer.open({
+        title: '提示',
+        content: '<p style="font-size: 18px;color: red;text-align: center">' + aaa +'</p>',
+        btnAlign: 'c',
+    });
+
+</script>
+
+
+</html>

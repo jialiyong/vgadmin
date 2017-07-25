@@ -1,0 +1,94 @@
+/*格式化样式*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0
+}
+fieldset, img {
+    border: 0
+}
+img {
+    display: block
+}
+ul, ol {
+    list-style: none
+}
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "Microsoft Yahei", "宋体";
+    background:none;
+    outline:none;
+    border:1px solid #666;
+}
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+select, input {
+    vertical-align: middle
+}
+select, input, textarea {
+    font-size: 12px;
+    margin: 0
+}
+input[type="text"], input[type="password"], textarea {
+    outline-style: none;
+    -webkit-appearance: none
+}
+textarea {
+    resize: none
+}
+table {
+    border-collapse: collapse
+}
+html{
+    height: 100%;
+}
+body {
+    color: #333;
+    font-family:"Microsoft Yahei","宋体",Tahoma,Arial,Helvetica,STHeiti;
+    background: #fff;
+    height: 100%;
+    background-image: url("../images/bodybgc.jpg");
+}
+img{
+    display: inline-block;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both
+}
+.clearfix {
+    zoom: 1
+}
+.clearit {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    overflow: hidden
+}
+.fl {
+    float: left;
+    _display: inline
+}
+.fr {
+    float: right;
+    _display: inline
+}
+a {
+    color: #666;
+    text-decoration: none
+}
+/*a:visited {*/
+    /*color: #666*/
+/*}*/
+/*a:hover, a:active, a:focus {*/
+    /*color: #ff8400;*/
+/*}*/
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}

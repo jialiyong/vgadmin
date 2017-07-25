@@ -1,0 +1,482 @@
+/*header*/
+.vg_header{
+    height: 80px;
+}
+.vg_header .vg_header_logo{
+    width: 200px;
+}
+.vg_header .vg_header_logo a{
+    display: inline-block;
+    height: 80px;
+    width: 200px;
+}
+.vg_header .vg_header_logo a img{
+    height: 80px;
+    width: 200px;
+}
+.vg_header .vg_header_right{
+    width:500px ;
+}
+.vg_header .vg_header_right .vg_header_phone{
+    width: 250px;
+    height: 80px;
+    line-height: 80px;
+}
+.vg_heade .vg_header_right .vg_header_phone span:first-child{
+    font-size: 16px;
+}
+.vg_header .vg_header_right .vg_header_phone span:last-child{
+    font-size: 24px;
+    font-family: Candara;
+}
+.vg_header .vg_header_right .vg_header_account{
+    height: 80px;
+    line-height: 80px;
+}
+.vg_header .vg_header_right .vg_header_account a:first-child{
+    margin-right: 35px;
+ }
+/*aside*/
+.vg_aside{
+    float: left;
+    width: 300px;
+    background-color: #f7fafa;
+    font-size: 14px;
+}
+.vg_aside .vg_aside_accountnum{
+
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_title{
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #c9ccd0;
+    border-bottom: 1px solid #c9ccd0;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_title .cir{
+    width:7px;
+    height: 7px;
+    display: inline-block;
+    border: 2px solid #0393c2;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_title h3{
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    color: #0393c2;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main{
+    height: 200px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #c9ccd0;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main .vg_aside_accountnum_main_user{
+    padding-left: 10px;
+    margin-top: 30px;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main .vg_aside_accountnum_main_phone{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main .vg_aside_accountnum_main_phone span:nth-child(3){
+    font-weight: 600;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main .vg_aside_accountnum_main_idcard{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main .vg_aside_accountnum_main_idcard span:nth-child(3){
+   color: #bebebe;
+}
+.vg_aside .vg_aside_accountnum .vg_aside_accountnum_main .vg_aside_accountnum_main_idcard a{
+    width: 70px;
+}
+.vg_aside .vg_aside_account{}
+.vg_aside .vg_aside_account .vg_aside_account_title{
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #c9ccd0;
+}
+.vg_aside .vg_aside_account .vg_aside_account_title .cir{
+    width:7px;
+    height: 7px;
+    display: inline-block;
+    border: 2px solid #0393c2;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_title h3{
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    color: #0393c2;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main{
+    height: 258px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #c9ccd0;
+    font-size: 14px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main a{
+    width: 60px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_usertype{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_livetime{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_livetime span:nth-child(3){
+   font-size: 18px;
+    color: #e72a19;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_livetime span:nth-child(4){
+    font-size: 14px;
+    color: #e72a19;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_timevalidity{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_timevalidity span:nth-child(3){
+    font-size: 18px;
+}
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_balance{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+}
+
+.vg_aside .vg_aside_account .vg_aside_account_main .vg_aside_account_main_balance  span:nth-child(3){
+    font-size: 18px;
+}
+.vg_aside .vg_aside_setting .vg_aside_setting_title{
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #c9ccd0;
+}
+.vg_aside .vg_aside_setting  .vg_aside_setting_title .cir{
+    width:7px;
+    height: 7px;
+    display: inline-block;
+    border: 2px solid #0393c2;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+.vg_aside .vg_aside_setting  .vg_aside_setting_title h3{
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    color: #0393c2;
+}
+.vg_aside .vg_aside_setting .vg_aside_setting_main{
+    height: 200px;
+    border-top: 1px solid #fff;
+    /*border-bottom: 1px solid #c9ccd0;*/
+}
+.vg_aside .vg_aside_setting .vg_aside_setting_main .vg_aside_setting_main_username{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 35px;
+}
+/*index-*/
+.vg_index{
+    margin-left: 300px;
+    width: 900px;
+    height: 819px;
+    background-color: #fff;
+}
+.vg_index .vg_index_main .vg_index_main_title{
+    height: 41px;
+    background-color: #6ddafc;
+    padding-top: 11px;
+}
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_list{
+    float: left;
+    width: 310px;
+    margin-left: 30px;
+}
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_list .vg_index_main_title_list_ico{
+    float: left;
+    height: 30px;
+    width: 30px;
+    background:url(../images/indexico2.png) no-repeat center center;
+    background-size:100% 100%;
+}
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_list p{
+    font-size: 18px;
+    font-weight: 600;
+    float: left;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_addlive{
+    float: left;
+}
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_addlive  a{
+    display: inline-block;
+}
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_addlive .vg_index_main_title_addlive_ico{
+    float: left;
+    height: 30px;
+    width: 30px;
+    background:url(../images/indexico1.png) no-repeat center center;
+    background-size:100% 100%;
+}
+.vg_index .vg_index_main .vg_index_main_title .vg_index_main_title_addlive p{
+    font-size: 18px;
+    font-weight: 600;
+    float: left;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+.vg_index .vg_index_main .vg_index_main_body{
+
+}
+.vg_index .vg_index_main .vg_index_main_body .vg_index_main_body_title{
+    font-size: 14px;
+    margin-left: 55px;
+    margin-top: 20px;
+}
+.vg_index .vg_index_main .vg_index_main_body .vg_index_main_body_addlive{
+    -webkit-box-shadow:0px 0px 97px #e2e2e2;
+    -moz-box-shadow:0px 0px 97px #e2e2e2;
+    width: 460px;
+    height: 297px;
+    border: 1px solid #666;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.vg_index .vg_index_main .vg_index_main_body .vg_index_main_body_addlive:hover{
+
+    -webkit-box-shadow:0px 0px 5px 2px #FF5722;
+    -moz-box-shadow:0px 0px 90px #aae8fc;
+}
+.vg_index .vg_index_main .vg_index_main_body .vg_index_main_body_addlive a{
+    display: inline-block;
+    width: 135px;
+    height: 200px;
+    margin-top: 50px;
+}
+.vg_index .vg_index_main .vg_index_main_body .vg_index_main_body_addlive a .vg_index_main_body_addlive_ico{
+    width: 135px;
+    height: 150px;
+    background:url(../images/addlive.png) no-repeat center center;
+    background-size:100% 100%;
+}
+.vg_index .vg_index_main .vg_index_main_body .vg_index_main_body_addlive a p{
+   font-size: 18px;
+    margin-top: 20px;
+}
+/*更换手机弹出窗*/
+.phonemark{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+    font-size: 16px;
+}
+.phonemark p{
+    display: inline-block;
+}
+.phonemark .layui-input{
+    display: inline-block;
+}
+.phonemark a{
+    display: inline-block;
+}
+.phonemark .phonebox{
+    width: 470px;
+    height: 365px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    border-radius: 4px;
+    margin-left: -235px;
+    top: 200px;
+
+}
+.phonemark .phonebox .phoneboxtitle{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 30px;
+    background: burlywood;
+}
+
+.phonemark .phonebox .phoneboxtitle p{
+
+}
+.phonemark .phonebox .phoneboxtitle span{
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+}
+.phonemark .phonebox .phoneboxmain{
+    padding:40px 0 20px 30px;
+}
+
+.phonemark .phonebox .phoneboxmain .nowphone{
+
+}
+.phonemark .phonebox .phoneboxmain .newphone{
+    position: relative;
+    margin-top: 45px;
+}
+.phonemark .phonebox .phoneboxmain .newphone .newphonered{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:160px;
+}
+.phonemark .phonebox .phoneboxmain .newphone input{
+    width: 215px;
+    height: 30px;
+}
+.phonemark .phonebox .phoneboxmain .code{
+    margin-top: 45px;
+    position: relative;
+}
+.phonemark .phonebox .phoneboxmain .code .codered{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.phonemark .phonebox .phoneboxmain .code input{
+    width: 105px;
+    height: 30px;
+}
+.phonemark .phonebox .phoneboxmain .code .phone_send{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 35px;
+    margin-left: 30px;
+    background-color: #f60;
+    opacity: 0.6;
+    color: #fff;
+}
+.phonemark .phonebox .phoneboxmain .phoneboxbtn{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.phonemark .phonebox .phoneboxmain .phoneboxbtn .layui-btn{
+    margin-right: 50px;
+}
+
+/*修改密码弹出窗*/
+.passmark{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+}
+.passmark p{
+    display: inline-block;
+}
+.passmark .passbox{
+    width: 470px;
+    height: 365px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    margin-left: -235px;
+    top: 200px;
+
+}
+.passmark .passbox .passboxtitle{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 30px;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.passmark .passbox .passboxtitle p{
+    font-size: 16px;
+}
+.passmark .passbox .passboxtitle span{
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+.passmark .passbox .passboxmain{
+    padding:40px 0 20px 30px;
+}
+.passmark .passbox .passboxmain input{
+    width: 210px;
+    height: 25px;
+}
+.passmark .passbox .passboxmain .nowpass{
+    position: relative;
+}
+.passmark .passbox .passboxmain .nowpass .nowpassred{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.passmark .passbox .passboxmain .newpass{
+    margin-top: 45px;
+    position: relative;
+}
+.passmark .passbox .passboxmain .newpass .newpassred{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.passmark .passbox .passboxmain .tonewpass{
+    margin-top: 45px;
+    position: relative;
+}
+.passmark .passbox .passboxmain .tonewpass .tonewpassred{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.passmark .passbox .passboxmain .passboxbtn{
+    margin-top: 45px;
+    text-align: center;
+}
+.passmark .passbox .passboxmain .passboxbtn #passsubbtn{
+    margin-right: 80px;
+}
+.passmark input{
+    display: inline-block;
+}
