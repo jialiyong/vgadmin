@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>微观传播</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/cityPicker/city-picker.css">
+    <link rel="stylesheet" href="./lib/alifont/iconfont.css">
+</head>
+<body>
+<div class="layouttop">
+    <div class="container">
+        <div class="vg-header">
+            <div class="vg-header-logo fl">
+                <a href="#">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="vg-header-right fr">
+                <div class="vg-header-phone fl">
+                    <span>客服电话：</span>
+                    <span>400-890-617</span>
+                </div>
+                <div class="vg-header-account fr">
+                    <a href="#" class="layui-btn layui-btn-danger  layui-btn-small">我的账户</a>
+                    <a href="#" class="">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="shim">
+        <div class="vg-body">
+            <div class="vg-aside">
+                <div class="vg-aside-accountnum">
+                    <div class="vg-aside-accountnum-title">
+                        <div class="cir"></div>
+                        <h3>账号信息</h3>
+                    </div>
+                    <div class="vg-aside-accountnum-main">
+                        <div class="vg-aside-accountnum-main-user">
+                            <span class="icon iconfont icon-geren2"></span>
+                            <span>用户名：</span>
+                            <span>jdjdjdj</span>
+                        </div>
+                        <div class="vg-aside-accountnum-main-phone">
+                            <span class="icon iconfont icon-shouji"></span>
+                            <span>手机号：</span>
+                            <span>13966666666</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr" id="resetphone">更换手机号</a>
+                        </div>
+                        <div class="vg-aside-accountnum-main-idcard">
+                            <span class="icon iconfont icon-shenfenzheng"></span>
+                            <span>身份验证：</span>
+                            <span>未完成</span>
+                            <a href="#"  class="layui-btn layui-btn-primary layui-btn-mini fr">去验证</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vg-aside-account">
+                    <div class="vg-aside-account-title">
+                        <div class="cir"></div>
+                        <h3>账户信息</h3>
+                    </div>
+                    <div class="vg-aside-account-main">
+                        <div class="vg-aside-account-main-usertype">
+                            <span class="icon iconfont icon-zuanshi"></span>
+                            <span>账户类型：</span>
+                            <span>普通账户</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">升级</a>
+                        </div>
+                        <div class="vg-aside-account-main-livetime">
+                            <span class="icon iconfont icon-riqi1"></span>
+                            <span>可直播时间：</span>
+                            <span>600</span>
+                            <span>分钟</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">购买</a>
+                        </div>
+                        <div class="vg-aside-account-main-timevalidity">
+                            <span class="icon iconfont icon-shouyechongdianshengyushijian"></span>
+                            <span>分钟有效期：</span>
+                            <span>2017-02-02</span>
+                        </div>
+                        <div class="vg-aside-account-main-balance">
+                            <span class="icon iconfont icon-274iconfontzhanghuyue"></span>
+                            <span>账户余额：</span>
+                            <span>0</span>
+                            <span>.00</span>
+                            <span>元</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr">充值</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vg-aside-setting">
+                    <div class="vg-aside-setting-title">
+                        <div class="cir"></div>
+                        <h3>安全设置</h3>
+                    </div>
+                    <div class="vg-aside-setting-main">
+                        <div class="vg-aside-setting-main-username">
+                            <span class="icon iconfont icon-xiugaimima"></span>
+                            <span>密码管理</span>
+                            <a href="#" id="rplcpassword" class="layui-btn layui-btn-primary layui-btn-mini fr">修改密码</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vg-idinfo">
+                <div class="vg-idinfo-main">
+                    <div class="vg-idinfo-main-title">
+                        <div class="vg-idinfo-main-title-list">
+                            <div class="vg-idinfo-main-title-list-ico">
+                                <span  class="fa fa-file-word-o" ></span>
+                            </div>
+                            <p>请填写身份信息</p>
+                        </div>
+                        <div class="vg-idinfo-main-title-backlist">
+                            <a href="#">
+                                <div class="vg-idinfo-main-title-backlist-ico">
+                                    <span class="fa fa-angle-left" ></span>
+                                </div>
+                                <p>返回</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="vg-idinfo-idinfoform">
+                        <form action="./dd.php">
+                            <p class="vg-idinfo-idinfoform-title"><span class="red">注：</span>请选择您的详细地址，如产生问题我们将安排各地区负责人上门指导</p>
+                            <div class="vg-idinfo-select">
+                                <span>所在区域：</span>
+                                <div class="city-picker-select" style="display: inline-block"></div>
+                            </div>
+                            <div class="vg-idinfo-address">
+                                <span>详细地址：</span>
+                                <input type="text" name="address" placeholder="请填写您的详细地址" lay-verify="title" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="vg-idinfo-address">
+                                <span>真实姓名：</span>
+                                <input type="text" name="name" placeholder="请填写您的真实姓名" lay-verify="title" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="vg-idinfo-address">
+                                <span>证件号码：</span>
+                                <input type="text" name="idcard" placeholder="请填写您的身份证号码" lay-verify="title" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="vg-idinfo-idpic">
+                                <span>证件号码：</span>
+                                <div>
+                                    <input id="imgurl" type="text"  readonly unselectable="on" placeholder="请上传您的手持身份证照片" lay-verify="title" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="filebox">
+                                    <a href="#" class="layui-btn layui-btn-danger">选择文件</a>
+                                    <input id="file" type="file">
+                                </div>
+                                <p class="vg-idinfo-idpic-title"><span class="red">注：</span>请上传真实有效的扫描件、照片图片大小2M以内，支持PNG、JPG、JPEG格式</p>
+                                <div class="imgbox">
+                                    <img src="./images/a7.png" alt="">
+                                    <img id="xmTanImg" src="" alt="">
+                                </div>
+                            </div>
+                            <div>
+                                <button> sdafasf</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div style="border-bottom: 1px solid #b6b6b6;width: 320px;float: left"></div>
+    <div style="border-bottom: 1px solid #3dc4c9;width: 880px;margin-left: 321px;"></div>
+</div>
+<div class="layoutbom">
+    <div class="container">
+
+        <div style="height: 130px;">
+
+        </div>
+    </div>
+</div>
+</body>
+<!--更换手机弹出窗-->
+<div class="phonemark">
+    <div class="phonebox">
+        <div class="phoneboxtitle">
+            <p>更换手机号</p>
+            <span id="closerplcphone">&times;</span>
+        </div>
+        <div class="phoneboxmain">
+            <form class="layui-form" action="">
+                <div class="">
+                    <label class="">您当前的手机号：</label>
+                    <div class="layui-input-inline">
+                        <p>132531396400</p>
+                    </div>
+                </div>
+                <div class="newphone">
+                    <p>请输入您的新号码：</p>
+                    <input type="text" id="newphone" class="layui-input">
+                    <p class="newphonered">*请输入正确的手机号码！</p>
+                </div>
+                <div class="code">
+                    <p>请输入验证码:</p>
+                    <input type="text" id="phonecode" class="layui-input">
+                    <a href="javascript:;" id="phone-send" class="phone-send">发送验证码</a>
+                    <p class="codered">*请输入验证码</p>
+                </div>
+                <div class="phoneboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="phonemarsubkbtn">提交</button>
+                    <button class="layui-btn layui-btn-primary" id="closerplcphonebtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--密码修改-->
+<div class="passmark">
+    <div class="passbox">
+        <div class="passboxtitle">
+            <p>修改密码</p>
+            <span id="closerplcpass">&times;</span>
+        </div>
+        <div class="passboxmain">
+            <form action="">
+                <div class="nowpass">
+                    <p>请输入您的旧密码：</p>
+                    <input type="password" id="nowpass" class="layui-input">
+                    <p class="nowpassred">*请输入旧密码！</p>
+                </div>
+                <div class="newpass">
+                    <p>请输入您的新密码：</p>
+                    <input type="password" id="newpass" class="layui-input">
+                    <p class="newpassred">*请输入新密码！</p>
+                </div>
+                <div class="tonewpass">
+                    <p>请确认您的新密码：</p>
+                    <input type="password" id="tonewpass" class="layui-input">
+                    <p class="tonewpassred">*请再次输入新密码！</p>
+                </div>
+                <div class="passboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="passsubbtn">确认</button>
+                    <button class="layui-btn layui-btn-primary" id="closepassbtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/layui/lay/dest/layui.all.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script src="./lib/cityPicker/citydata.js"></script>
+<script src="./lib/cityPicker/cityPicker-1.1.1.js"></script>
+
+</html>
+<script>
+    $(function () {
+        var select = $('.city-picker-select').cityPicker({
+            dataJson: cityData,
+            renderMode: false,
+            autoSelected: false
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $("#file").change(function(){
+            var url = document.getElementById("file").files[0].name;
+                var imgURL = document.getElementById("file").files;
+                var size = document.getElementById("file").files[0].size;
+                var maxsize = 1024*1024*2;
+            if(size>maxsize){
+                $("#imgurl").val("");
+                alert('图片大于2M!');
+                return false;
+            }
+            $("#imgurl").val(url);
+                xmTanUploadImg(this);
+        });
+        function xmTanUploadImg(obj) {
+            var file = obj.files[0];
+            var reader = new FileReader();
+            //读取文件过程方法
+            reader.onload = function (e) {
+                var img = document.getElementById("xmTanImg");
+                img.src = e.target.result;
+            }
+            reader.readAsDataURL(file)
+        }
+
+    })
+
+</script>

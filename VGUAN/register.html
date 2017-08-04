@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>微观传播</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <!--[if IE]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: #000;">
+<div class="container">
+    <div class="vg-registerheader">
+        <div class="vg-logo fl">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="fr">
+            <a href="#" style="color: #fff">已有账号，去登陆</a>
+        </div>
+    </div>
+    <div class="vg-registerform">
+        <form action="login.do?act=login" method="post">
+            <h1 class="vg-title">注册</h1>
+            <div class="vg-line"></div>
+            <div class="vg-inpbox">
+                <span class="fa fa-user"></span>
+                <input type="text" class="vg-ipt" name="" id="userid"  placeholder="请输入用户名">
+                <p class="vg-useridp"></p>
+            </div>
+            <div class="vg-inpbox">
+                <span class="fa fa-mobile"></span>
+                <input type="text" class="vg-ipt" name="" id="phone" placeholder="请输入手机号">
+                <p class="vg-phonep"></p>
+            </div>
+            <div class="vg-inpbox">
+                <span class="fa fa-unlock-alt"></span>
+                <input type="text" class="vg-ipt" name="" id="phone-code" placeholder="请输入验证码">
+                <p class="vg-phone-codep"></p>
+                <a href="javascript:;" id="phone-send" class="vg-phone-send">获取验证码</a>
+            </div>
+            <div class="vg-inpbox">
+                <span class="fa fa-lock"></span>
+                <input type="password" class="vg-ipt" name="" id="password" placeholder="请设置一个6-20位的密码">
+                <p class="vg-passwordp"></p>
+            </div>
+            <div class="vg-inpbox">
+                <span class="fa fa-lock"></span>
+                <input type="password" class="vg-ipt" name="" id="password-confirmation" placeholder="请再次输入您的密码">
+                <p class="vg-password-confirmationp"></p>
+            </div>
+            <div class="vg-custom-checkbox">
+                <p class="vg-agree-protocolp">*请勾选我以阅读并同意相关服务条款</p>
+                <input type="checkbox" checked name="" id="agree-protocol" value="checkbox">
+                <p>我已阅读并同意相关的</p>
+                <a href="#" >服务条款</a>
+            </div>
+            <button type= name="submit1" id="to-register" class="vg-btn">立即注册</button>
+        </form>
+    </div>
+    <div class="vg-footer">
+        <div class="vg-footertop">
+            <a href="">关于我们</a>
+            <a href="">合作伙伴</a>
+            <a href="">加入微观</a>
+            <a href="">联系我们</a>
+            <a href="">常见问题</a>
+        </div>
+        <div class="vg-footerbottom">
+            <p>备案号：xxxxxxxxxxxxxx</p>
+        </div>
+    </div>
+</div>
+<div class="canvasbox" style="position: absolute;top: 0;z-index: -99">
+    <div class="content">
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/layui/lay/dest/layui.all.js"></script>
+<script src="js/rAF.js"></script>
+<script type="text/javascript">
+    $("#userid").blur(function(){
+        var userid = $("#userid").val();
+        var userreg = /^[\u4E00-\u9FA5A-Za-z0-9-]+$/;
+        var userlength = /^.{1,12}$/;
+        if(userid==""){
+            $(".vg-useridp").html("*请填写用户名").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!userreg.test(userid)){
+            $(".vg-useridp").html("*用户名不能包含特殊字符").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!userlength.test(userid)){a
+            $(".vg-useridp").html("*长度最短1个字符，不能超过14个字符").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#phone").blur(function(){
+        var phone = $("#phone").val();
+        var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        if(phone==""){
+            $(".vg-phonep").html("*请输入手机号  ").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!phonereg.test(phone)){
+            $(".vg-phonep").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#phone-code").blur(function(){
+        var phone-code = $("#phone-code").val();
+        if(phone-code==""){
+            $(".vg-phone-codep").html("*请输入验证码").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(phone-code!=321){
+            $(".vg-phone-codep").html("*您输入的验证码不正确").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#password").blur(function(){
+        var password = $("#password").val();
+        var passreg = /^.{6,20}$/;
+        if(password==""){
+            $(".vg-passwordp").html("*请输入您的密码").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!passreg.test(password)){
+            $(".vg-passwordp").html("*请输入长度为6-20位的密码").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#password-confirmation").blur(function(){
+        var password = $("#password").val();
+        var password-confirmation = $("#password-confirmation").val();
+        if(password!=password-confirmation){
+            $(".vg-password-confirmationp").html("*您输入的两次密码不一致").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    });
+    $("#to-register").on("click",function () {
+        var userid = $("#userid").val();
+        var phone = $("#phone").val();
+        var phone-code = $("#phone-code").val();
+        var password = $("#password").val();
+        var password-confirmation = $("#password-confirmation").val();
+        var agree-protocol = $("#agree-protocol");
+        var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        var userreg = /^[\u4E00-\u9FA5A-Za-z0-9-]+$/;
+        var passreg = /^.{6,20}$/;
+        var userlength = /^.{4,12}$/;
+        if(userid==""){
+            $(".vg-useridp").html("*请填写用户名").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!userreg.test(userid)){
+            $(".vg-useridp").html("*用户名不能包含特殊字符").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!userlength.test(userid)){
+            $(".vg-useridp").html("*长度最短4个字符，不能超过14个字符").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(phone==""){
+            $(".vg-phonep").html("*请输入手机号  ").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!phonereg.test(phone)){
+            $(".vg-phonep").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(phone-code==""){
+            $(".vg-phone-codep").html("*请输入验证码").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(phone-code!=321){
+            $(".vg-phone-codep").html("*您输入的验证码不正确").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(password==""){
+            $(".vg-passwordp").html("*请输入您的密码").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!passreg.test(password)){
+            $(".vg-passwordp").html("*请输入长度为6-20位的密码").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(password!=password-confirmation){
+            $(".vg-password-confirmationp").html("*您输入的两次密码不一致").fadeIn().delay(2000).fadeOut();
+            return false;
+        }else if(!agree-protocol.is(':checked')){
+            $(".vg-agree-protocolp").fadeIn().delay(2000).fadeOut();
+            return false;
+        }
+    })
+    var a = 0;
+    $(".vg-phone-send").click(function () {
+        if(a==0){
+            a= 1;
+            var phone = $("#phone").val();
+            if(phone == ""){
+                $(".vg-phonep").html("*请输入手机号  ").fadeIn().delay(2000).fadeOut();
+                a = 0;
+                return false;
+            }else {
+                var preg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if (!preg.test(phone)) {
+                    $(".vg-phonep").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
+                    a = 0;
+                    return false;
+                }
+            }
+            $.ajax({
+                url:'',
+                type:'post',
+                data:{ "mobile": phone},
+                success:function (res) {
+                    var time = 60;
+                    var phone-send = $("#phone-send");
+                    phone-send.addClass("phone-down");
+                    var set = setInterval(function() {
+                        time--;
+                        phone-send.html(time+"s重新发送");
+                        if(time == 0) {
+                            a=0;
+                            phone-send.removeClass("phone-down").html("发送验证码");
+                            clearInterval(set);
+                        }
+                    }, 1000);
+                }
+            })
+        }
+    })
+</script>
+</html>

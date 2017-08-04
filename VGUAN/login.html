@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>微观传播</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <!--[if IE]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+<body style="background-color: #000;">
+<div class="container">
+    <div class="vg-logobox">
+        <div class="vg-logo">
+            <img src="./images/logo.png" alt="">
+        </div>
+    </div>
+    <div class="vg-loginform">
+        <form action="" method="post" >
+            <h1 class="vg-title">账号登录</h1>
+            <div class="vg-line"></div>
+            <div class="vg-inpbox">
+                <span class="fa fa-user"></span>
+                <input type="text" class="vg-ipt" name="userid" placeholder="请输入用户名">
+                <p>*用户名或密码不正确</p>
+            </div>
+            <div class="vg-inpbox">
+                <span class="fa fa-lock"></span>
+                <input type="password" class="vg-ipt" name="passwd" placeholder="请输密码">
+                <p>*用户名或密码不正确</p>
+            </div>
+            <div class="vg-inpbox">
+                <input type="text" class="vg-iptcode" name="verify"  placeholder="请输入验证码">
+                <div class="vg-codeimg"><img src="" alt=""></div>
+                <p>*验证码码不正确</p>
+
+            </div>
+            <div class="vg-inpboxlast">
+                <input type="checkbox" class="fl" name="checkd" value="checkbox">
+                <p class="fl">自动登录</p>
+                <a href="#" class="fr">忘记密码？</a>
+            </div>
+            <button type=submit name="submit1" class="vg-btn">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+        </form>
+        <div style="text-align: center;margin-top: 10px">
+            <a href="#" >没有账户，去注册</a>
+        </div>
+
+    </div>
+    <div class="vg-footer">
+        <div class="vg-footertop">
+            <a href="">关于我们</a>
+            <a href="">合作伙伴</a>
+            <a href="">加入微观</a>
+            <a href="">联系我们</a>
+            <a href="">常见问题</a>
+        </div>
+        <div class="vg-footerbottom">
+            <p>备案号：xxxxxxxxxxxxxx</p>
+        </div>
+    </div>
+</div>
+
+<div class="canvasbox" style="position: absolute;top: 0;z-index: -99">
+    <div class="content">
+        <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/layui/lay/dest/layui.all.js"></script>
+<script src="js/rAF.js"></script>
+</html>
