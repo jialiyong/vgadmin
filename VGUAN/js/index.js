@@ -1,24 +1,25 @@
 /**
  * Created by 微观 on 2017/7/28.
  */
+
 //更换手机号
 $("#resetphone").on("click",function () {
-    $(".phonemark").fadeIn();
+    $(".phonemask").fadeIn();
 })
 $("#closerplcphone").on("click",function () {
     $("#newphone").val("")
     $("#phonecode").val("");
-    $(".phonemark").fadeOut();
+    $(".phonemask").fadeOut();
 })
 $("#closerplcphonebtn").on("click",function () {
     $("#newphone").val("")
     $("#phonecode").val("");
-    $(".phonemark").fadeOut();
+    $(".phonemask").fadeOut();
     return false;
 })
 //发送验证码
 var a = 0;
-$(".phone_send").click(function () {
+$(".phone-send").click(function () {
     if(a==0){
         a= 1;
         var newphone = $("#newphone").val();
@@ -40,14 +41,14 @@ $(".phone_send").click(function () {
             data:{ "mobile": newphone},
             success:function (res) {
                 var time = 60;
-                var phone_send = $("#phone_send");
-                phone_send.addClass("phone_down");
+                var phone_send = $("#phone-send");
+                phone_send.addClass("vg-phone-down");
                 var set = setInterval(function() {
                     time--;
                     phone_send.html(time+"s重新发送");
                     if(time == 0) {
                         a=0;
-                        phone_send.removeClass("phone_down").html("发送验证码");
+                        phone_send.removeClass("vg-phone-down").html("发送验证码");
                         clearInterval(set);
                     }
                 }, 1000);
@@ -58,17 +59,22 @@ $(".phone_send").click(function () {
 $("#phonemarsubkbtn").on("click",function () {
     var newphone = $("#newphone").val();
     var phonecode = $("#phonecode").val();
+    var preg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
     if (newphone==""){
         $(".newphonered").html("*请输入手机号 ").fadeIn().delay(2000).fadeOut();
         return false;
-    }else if(phonecode==""){
+    }else if(!preg.test(newphone)){
+        $(".newphonered").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
+        return false;
+    }
+    else if(phonecode==""){
         $(".codered").fadeIn().delay(2000).fadeOut();
         return false;
     }
     //在此发送ajax
     $("#newphone").val("")
     $("#phonecode").val("");
-    $(".phonemark").fadeOut();
+    $(".phonemask").fadeOut();
     $(".promptmark").fadeIn();
     return false;
 })
@@ -91,16 +97,16 @@ $("#phonemarsubkbtn").on("click",function () {
 //    })
 //修改密码
 $("#rplcpassword").on("click",function () {
-    $(".passmark").fadeIn();
+    $(".passmask").fadeIn();
 })
 $("#closerplcpass").on("click",function () {
-    $(".passmark").fadeOut();
+    $(".passmask").fadeOut();
     $("#nowpass").val("");
     $("#tonewpass").val("");
     $("#newpass").val("");
 })
 $("#closepassbtn").on("click",function () {
-    $(".passmark").fadeOut();
+    $(".passmask").fadeOut();
     $("#nowpass").val("");
     $("#tonewpass").val("");
     $("#newpass").val("");
@@ -157,7 +163,7 @@ $("#passsubbtn").on("click",function () {
         $("#nowpass").val("");
         $("#tonewpass").val("");
         $("#newpass").val("");
-        $(".passmark").fadeOut();
+        $(".passmask").fadeOut();
         $(".promptmark").fadeIn();
         return false;
     }

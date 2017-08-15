@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./lib/layui/css/layui.css">
     <link rel="stylesheet" href="./lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./lib/cityPicker/city-picker.css">
+    <link rel="stylesheet" href="./lib/sjld/css.css">
     <link rel="stylesheet" href="./lib/alifont/iconfont.css">
 </head>
 <body>
@@ -117,9 +118,9 @@
                     <div class="vg-idinfo-main-title">
                         <div class="vg-idinfo-main-title-list">
                             <div class="vg-idinfo-main-title-list-ico">
-                                <span  class="fa fa-file-word-o" ></span>
+                                <span  class="icon iconfont icon-123456" ></span>
                             </div>
-                            <p>请填写身份信息</p>
+                            <p>填写身份信息</p>
                         </div>
                         <div class="vg-idinfo-main-title-backlist">
                             <a href="#">
@@ -131,41 +132,90 @@
                         </div>
                     </div>
                     <div class="vg-idinfo-idinfoform">
-                        <form action="./dd.php">
+                        <form class="layui-form" action="">
                             <p class="vg-idinfo-idinfoform-title"><span class="red">注：</span>请选择您的详细地址，如产生问题我们将安排各地区负责人上门指导</p>
                             <div class="vg-idinfo-select">
-                                <span>所在区域：</span>
-                                <div class="city-picker-select" style="display: inline-block"></div>
+                               <span>所在区域：</span>
+                                <div id="sjld" style="width:520px;margin-left: 75px;position:relative;display: inline-block">
+
+                                    <div class="m_zlxg" id="shenfen">
+
+                                        <p title="">选择省份</p>
+
+                                        <div class="m_zlxg2">
+
+                                            <ul></ul>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="m_zlxg" id="chengshi">
+
+                                        <p title="">选择城市</p>
+
+                                        <div class="m_zlxg2">
+
+                                            <ul></ul>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="m_zlxg" id="quyu">
+
+                                        <p title="">选择区域</p>
+
+                                        <div class="m_zlxg2">
+
+                                            <ul></ul>
+
+                                        </div>
+
+                                    </div>
+
+                                    <input id="sfdq_num" type="hidden" value="" />
+
+                                    <input id="csdq_num" type="hidden" value="" />
+
+                                    <input id="sfdq_tj" name="dddd" type="hidden" value="" />
+
+                                    <input id="csdq_tj" name="aaa" type="hidden" value="" />
+
+                                    <input id="qydq_tj" name="vvv" type="hidden" value="" />
+
+                                </div>
                             </div>
                             <div class="vg-idinfo-address">
                                 <span>详细地址：</span>
-                                <input type="text" name="address" placeholder="请填写您的详细地址" lay-verify="title" autocomplete="off" class="layui-input">
+                                <input type="text" name="address" placeholder="请填写您的详细地址" lay-verify="address" autocomplete="off" class="layui-input">
                             </div>
                             <div class="vg-idinfo-address">
                                 <span>真实姓名：</span>
-                                <input type="text" name="name" placeholder="请填写您的真实姓名" lay-verify="title" autocomplete="off" class="layui-input">
+                                <input type="text" name="username" placeholder="请填写您的真实姓名" lay-verify="username" autocomplete="off" class="layui-input">
                             </div>
                             <div class="vg-idinfo-address">
                                 <span>证件号码：</span>
-                                <input type="text" name="idcard" placeholder="请填写您的身份证号码" lay-verify="title" autocomplete="off" class="layui-input">
+                                <input type="text" name="idcard" placeholder="请填写您的身份证号码" lay-verify="idcard" autocomplete="off" class="layui-input">
                             </div>
                             <div class="vg-idinfo-idpic">
-                                <span>证件号码：</span>
+                                <span>证件照片：</span>
                                 <div>
                                     <input id="imgurl" type="text"  readonly unselectable="on" placeholder="请上传您的手持身份证照片" lay-verify="title" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="filebox">
                                     <a href="#" class="layui-btn layui-btn-danger">选择文件</a>
-                                    <input id="file" type="file">
+                                    <input id="file" name="idpic" lay-verify="idpic" type="file">
                                 </div>
                                 <p class="vg-idinfo-idpic-title"><span class="red">注：</span>请上传真实有效的扫描件、照片图片大小2M以内，支持PNG、JPG、JPEG格式</p>
                                 <div class="imgbox">
-                                    <img src="./images/a7.png" alt="">
+                                    <img src="./images/idcard.jpg" alt="">
                                     <img id="xmTanImg" src="" alt="">
                                 </div>
                             </div>
-                            <div>
-                                <button> sdafasf</button>
+                            <div class="vg-idbtn">
+                                <button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="*">创&nbsp;&nbsp;&nbsp;&nbsp;建</button>
+                                <a href="./index.html" class="layui-btn layui-btn-primary">取&nbsp;&nbsp;&nbsp;&nbsp;消</a>
                             </div>
                         </form>
                     </div>
@@ -188,7 +238,7 @@
 </div>
 </body>
 <!--更换手机弹出窗-->
-<div class="phonemark">
+<div class="phonemask">
     <div class="phonebox">
         <div class="phoneboxtitle">
             <p>更换手机号</p>
@@ -222,7 +272,7 @@
     </div>
 </div>
 <!--密码修改-->
-<div class="passmark">
+<div class="passmask">
     <div class="passbox">
         <div class="passboxtitle">
             <p>修改密码</p>
@@ -258,34 +308,29 @@
 <script type="text/javascript" src="./js/index.js"></script>
 <script src="./lib/cityPicker/citydata.js"></script>
 <script src="./lib/cityPicker/cityPicker-1.1.1.js"></script>
+<script src="./lib/sjld/address.js"></script>
 
 </html>
 <script>
     $(function () {
-        var select = $('.city-picker-select').cityPicker({
-            dataJson: cityData,
-            renderMode: false,
-            autoSelected: false
-        });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        $("#sjld").sjld("#shenfen","#chengshi","#quyu");
+        //三级初始化
+//        var select = $('.city-picker-select').cityPicker({
+//            dataJson: cityData,
+//            renderMode: false,
+//            autoSelected: false
+//        });
+//        select.setCityVal([{
+//            'id': '110000',
+//            'name': '北京市'
+//        }, {
+//            'id': '110100',
+//            'name': '北京市'
+//        }, {
+//            'id': '110105',
+//            'name': '朝阳区'
+//        }]);
+            //上传
         $("#file").change(function(){
             var url = document.getElementById("file").files[0].name;
                 var imgURL = document.getElementById("file").files;
@@ -299,6 +344,8 @@
             $("#imgurl").val(url);
                 xmTanUploadImg(this);
         });
+
+
         function xmTanUploadImg(obj) {
             var file = obj.files[0];
             var reader = new FileReader();
@@ -308,7 +355,41 @@
                 img.src = e.target.result;
             }
             reader.readAsDataURL(file)
-        }
+        };
+
+
+        //id审核提示框
+        layer.confirm('信息提交成功！我们会在一个工作日内完成审核，审核通过后会以短信的方式提醒您，请注意查收~', {
+            title: '提示',
+            btn: ['确认'],
+            btnAlign: 'c',
+            skin: 'idcard-btnclass'
+        }, function(){
+            location.href="./index.html"
+        });
+
+//表单验证
+        layui.form().verify({
+            address: function(value){
+                if(value.length == ""){
+                    return '请填写地址！';
+                }
+            }
+            ,username:function (value) {
+                if(value.length == ""){
+                    return '请填写姓名！';
+                }
+            },idcard:function (value) {
+                if(value.length == ""){
+                    return '请填写身份证号码';
+                }
+
+            },idpic:function (value) {
+                if(value.length == ""){
+                    return '请上传手持身份证照片！';
+                }
+            }
+        });
 
     })
 

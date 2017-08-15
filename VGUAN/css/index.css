@@ -195,17 +195,18 @@
     width: 310px;
     margin-left: 30px;
 }
-.vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-list .vg-index-main-title-list-ico{
+.vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-list .vg-index-main-title-list-ico span{
     float: left;
-    height: 30px;
-    width: 30px;
-    background:url(../images/indexico2.png) no-repeat center center;
-    background-size:100% 100%;
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-list p{
     font-size: 18px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     float: left;
+    color: #ffffff;
     margin-top: 3px;
     margin-left: 20px;
 }
@@ -216,17 +217,18 @@
 .vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-addlive  a{
     display: inline-block;
 }
-.vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-addlive .vg-index-main-title-addlive-ico{
+.vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-addlive .vg-index-main-title-addlive-ico span{
     float: left;
-    height: 30px;
-    width: 30px;
-    background:url(../images/indexico1.png) no-repeat center center;
-    background-size:100% 100%;
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .vg-index .vg-index-main .vg-index-main-title .vg-index-main-title-addlive p{
     font-size: 18px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     float: left;
+    color: #ffffff;
     margin-top: 3px;
     margin-left: 20px;
 }
@@ -270,206 +272,10 @@
    font-size: 18px;
     margin-top: 20px;
 }
-/*更换手机弹出窗*/
-.phonemark{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:rgba(0,0,0,0.5);
-    font-size: 16px;
-}
-.phonemark p{
-    display: inline-block;
-}
-.phonemark .layui-input{
-    display: inline-block;
-}
-.phonemark a{
-    display: inline-block;
-}
-.phonemark .phonebox{
-    width: 470px;
-    height: 365px;
-    background-color: #fff;
-    position: absolute;
-    left: 50%;
-    border-radius: 4px;
-    margin-left: -235px;
-    top: 200px;
+/*skin*/
+body .-btnclass .layui-layer-btn0{background:#f60;border-color: #f60;}
+body .prompt-btnclass .layui-layer-btn0{background:#f60;border-color: #f60;margin-right: 50px}
 
-}
-.phonemark .phonebox .phoneboxtitle{
-    height: 55px;
-    line-height: 55px;
-    padding: 0 10px 0 30px;
-    background: burlywood;
-}
-
-.phonemark .phonebox .phoneboxtitle p{
-
-}
-.phonemark .phonebox .phoneboxtitle span{
-    cursor: pointer;
-    float: right;
-    font-size: 30px;
-}
-.phonemark .phonebox .phoneboxmain{
-    padding:40px 0 20px 30px;
-}
-
-.phonemark .phonebox .phoneboxmain .nowphone{
-
-}
-.phonemark .phonebox .phoneboxmain .newphone{
-    position: relative;
-    margin-top: 45px;
-}
-.phonemark .phonebox .phoneboxmain .newphone .newphonered{
-    display: none;
-    color: red;
-    font-size: 12px;
-    position: absolute;
-    top:43px;
-    left:160px;
-}
-.phonemark .phonebox .phoneboxmain .newphone input{
-    width: 215px;
-    height: 30px;
-}
-.phonemark .phonebox .phoneboxmain .code{
-    margin-top: 45px;
-    position: relative;
-}
-.phonemark .phonebox .phoneboxmain .code .codered{
-    display: none;
-    color: red;
-    font-size: 12px;
-    position: absolute;
-    top:43px;
-    left:110px;
-}
-.phonemark .phonebox .phoneboxmain .code input{
-    width: 105px;
-    height: 30px;
-}
-.phonemark .phonebox .phoneboxmain .code .phone-send{
-    width: 100px;
-    height: 35px;
-    cursor: pointer;
-    text-align: center;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 35px;
-    margin-left: 30px;
-    background-color: #f60;
-    opacity: 0.6;
-    color: #fff;
-}
-.phonemark .phonebox .phoneboxmain .phoneboxbtn{
-    margin-top: 40px;
-    text-align: center;
-}
-
-.phonemark .phonebox .phoneboxmain .phoneboxbtn .layui-btn{
-    margin-right: 50px;
-}
-
-/*修改密码弹出窗*/
-.passmark{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:rgba(0,0,0,0.5);
-}
-.passmark p{
-    display: inline-block;
-}
-.passmark .passbox{
-    width: 470px;
-    height: 365px;
-    background-color: #fff;
-    position: absolute;
-    border-radius: 4px;
-    left: 50%;
-    margin-left: -235px;
-    top: 200px;
-
-}
-.passmark .passbox .passboxtitle{
-    height: 55px;
-    line-height: 55px;
-    padding: 0 10px 0 30px;
-    background-color: #eeeeee;
-    border-bottom: 1px solid #e2e2e2;
-}
-
-.passmark .passbox .passboxtitle p{
-    font-size: 16px;
-}
-.passmark .passbox .passboxtitle span{
-    float: right;
-    font-size: 30px;
-    cursor: pointer;
-
-}
-.passmark .passbox .passboxmain{
-    padding:40px 0 20px 30px;
-}
-.passmark .passbox .passboxmain input{
-    width: 210px;
-    height: 25px;
-}
-.passmark .passbox .passboxmain .nowpass{
-    position: relative;
-}
-.passmark .passbox .passboxmain .nowpass .nowpassred{
-    display: none;
-    color: red;
-    font-size: 12px;
-    position: absolute;
-    top:43px;
-    left:110px;
-}
-.passmark .passbox .passboxmain .newpass{
-    margin-top: 45px;
-    position: relative;
-}
-.passmark .passbox .passboxmain .newpass .newpassred{
-    display: none;
-    color: red;
-    font-size: 12px;
-    position: absolute;
-    top:43px;
-    left:110px;
-}
-.passmark .passbox .passboxmain .tonewpass{
-    margin-top: 45px;
-    position: relative;
-}
-.passmark .passbox .passboxmain .tonewpass .tonewpassred{
-    display: none;
-    color: red;
-    font-size: 12px;
-    position: absolute;
-    top:43px;
-    left:110px;
-}
-.passmark .passbox .passboxmain .passboxbtn{
-    margin-top: 45px;
-    text-align: center;
-}
-.passmark .passbox .passboxmain .passboxbtn #passsubbtn{
-    margin-right: 80px;
-}
-.passmark input{
-    display: inline-block;
-}
 /*登陆*/
 .vg-logobox{
     height: 100px;
@@ -729,6 +535,7 @@
 .vg-registerform .vg-inpbox .vg-phone-down{
     background: #c8c8c8;
     color: #4d4d4d;
+    cursor: not-allowed;
 }
 .vg-registerform .vg-inpbox .vg-phone-down:hover{
     opacity: 1;
@@ -755,17 +562,17 @@
     width: 310px;
     margin-left: 30px;
 }
-.vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-list .vg-livelist-main-title-list-ico{
+.vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-list .vg-livelist-main-title-list-ico span{
     float: left;
-    height: 30px;
-    width: 30px;
-    background:url(../images/indexico2.png) no-repeat center center;
-    background-size:100% 100%;
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-list p{
     font-size: 18px;
-    font-weight: 600;
     float: left;
+    color: #ffffff;
     margin-top: 3px;
     margin-left: 20px;
 }
@@ -776,17 +583,17 @@
 .vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-addlive  a{
     display: inline-block;
 }
-.vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-addlive .vg-livelist-main-title-addlive-ico{
+.vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-addlive .vg-livelist-main-title-addlive-ico span{
     float: left;
-    height: 30px;
-    width: 30px;
-    background:url(../images/indexico1.png) no-repeat center center;
-    background-size:100% 100%;
+    font-size: 28px;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .vg-livelist .vg-livelist-main .vg-livelist-main-title .vg-livelist-main-title-addlive p{
     font-size: 18px;
-    font-weight: 600;
     float: left;
+    color: #ffffff;
     margin-top: 3px;
     margin-left: 20px;
 }
@@ -940,6 +747,7 @@
     background-color: #f8f9fb;
     border-left: 1px solid #b6b6b6;
     border-right: 1px solid #3dc4c9;
+    padding-bottom: 20px;
 }
 
 .vg-liveinfo .vg-liveinfo-main .vg-liveinfo-main-title{
@@ -960,16 +768,18 @@
     /*background-size:100% 100%;*/
 }
 .vg-liveinfo .vg-liveinfo-main .vg-liveinfo-main-title .vg-liveinfo-main-title-list .vg-liveinfo-main-title-list-ico span{
-    font-size: 20px;
+    font-size: 28px;
     margin-left: 10px;
-    margin-top: 6px;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .vg-liveinfo .vg-liveinfo-main .vg-liveinfo-main-title .vg-liveinfo-main-title-list p{
     font-size: 18px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     float: left;
+    color: #ffffff;
     margin-top: 3px;
-    margin-left: 5px;
+    margin-left: 15px;
 }
 .vg-liveinfo .vg-liveinfo-main .vg-liveinfo-main-title .vg-liveinfo-main-title-backlist{
     float: right;
@@ -987,13 +797,15 @@
    font-size: 28px;
     margin-left: 10px;
     margin-top: 1px;
+    color: #ffffff;
 }
 .vg-liveinfo .vg-liveinfo-main .vg-liveinfo-main-title .vg-liveinfo-main-title-backlist p{
     font-size: 18px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     float: left;
+    color: #ffffff;
     margin-top: 3px;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 .vg-liveinfo .vg-infoform{
     width: 560px;
@@ -1194,9 +1006,11 @@
 
 .vg-idinfo{
     margin-left: 320px;
-    width: 880px;
-    height: 699px;
-    background-color: #fff;
+    width: 878px;
+    height: 820px;
+    background-color: #f8f9fb;
+    border-left: 1px solid #b6b6b6;
+    border-right: 1px solid #3dc4c9;
 }
 
 .vg-idinfo .vg-idinfo-main .vg-idinfo-main-title{
@@ -1217,16 +1031,18 @@
     /*background-size:100% 100%;*/
 }
 .vg-idinfo .vg-idinfo-main .vg-idinfo-main-title .vg-idinfo-main-title-list .vg-idinfo-main-title-list-ico span{
-    font-size: 20px;
+    font-size: 28px;
     margin-left: 10px;
-    margin-top: 6px;
+    margin-top: 1px;
+    color: #ffffff;
 }
 .vg-idinfo .vg-idinfo-main .vg-idinfo-main-title .vg-idinfo-main-title-list p{
     font-size: 18px;
-    font-weight: 600;
+    /*font-weight: 600;*/
+    margin-left: 15px;
     float: left;
+    color: #ffffff;
     margin-top: 3px;
-    margin-left: 5px;
 }
 .vg-idinfo .vg-idinfo-main .vg-idinfo-main-title .vg-idinfo-main-title-backlist{
     float: right;
@@ -1247,8 +1063,9 @@
 }
 .vg-idinfo .vg-idinfo-main .vg-idinfo-main-title .vg-idinfo-main-title-backlist p{
     font-size: 18px;
-    font-weight: 600;
+    /*font-weight: 600;*/
     float: left;
+    color: #ffffff;
     margin-top: 3px;
     margin-left: 5px;
 }
@@ -1262,7 +1079,14 @@
 }
 .vg-idinfo-idinfoform .vg-idinfo-select{
     margin-top: 20px;
+    position: relative;
 }
+.vg-idinfo-idinfoform .vg-idinfo-select>span{
+    position: absolute;
+    top: 5px;
+
+}
+
 .vg-idinfo-idinfoform  .vg-idinfo-address{
     margin-top: 20px;
 }
@@ -1288,7 +1112,9 @@
     width: 92px;
     height: 38px;
     top: 0;
+    left:0;
     opacity: 0;
+    cursor: pointer;
 }
 .vg-idinfo-idinfoform  .vg-idinfo-idpic .vg-idinfo-idpic-title{
     font-size: 12px;
@@ -1310,6 +1136,12 @@
     top: 0;
     width: 100%;
     height: 100%;
+}
+.vg-idinfo-idinfoform  .vg-idbtn button{
+    margin: 30px 30px 0 150px;
+}
+.vg-idinfo-idinfoform  .vg-idbtn a{
+    margin: 30px 30px 0 50px;
 }
 
 

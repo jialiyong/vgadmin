@@ -94,99 +94,114 @@
         var userid = $("#userid").val();
         var userreg = /^[\u4E00-\u9FA5A-Za-z0-9-]+$/;
         var userlength = /^.{1,12}$/;
+        $(".vg-useridp").html("*请填写用户名").fadeOut();
         if(userid==""){
-            $(".vg-useridp").html("*请填写用户名").fadeIn().delay(2000).fadeOut();
+            $(".vg-useridp").html("*请填写用户名").fadeIn();
             return false;
         }else if(!userreg.test(userid)){
-            $(".vg-useridp").html("*用户名不能包含特殊字符").fadeIn().delay(2000).fadeOut();
+            $(".vg-useridp").html("*用户名不能包含特殊字符").fadeIn();
             return false;
         }else if(!userlength.test(userid)){a
-            $(".vg-useridp").html("*长度最短1个字符，不能超过14个字符").fadeIn().delay(2000).fadeOut();
+            $(".vg-useridp").html("*长度最短1个字符，不能超过14个字符").fadeIn();
             return false;
         }
     });
     $("#phone").blur(function(){
         var phone = $("#phone").val();
         var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        $(".vg-phonep").html("*请输入手机号  ").fadeOut();
         if(phone==""){
-            $(".vg-phonep").html("*请输入手机号  ").fadeIn().delay(2000).fadeOut();
+            $(".vg-phonep").html("*请输入手机号  ").fadeIn();
             return false;
         }else if(!phonereg.test(phone)){
-            $(".vg-phonep").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
+            $(".vg-phonep").html("*手机号格式不正确").fadeIn();
             return false;
         }
     });
     $("#phone-code").blur(function(){
-        var phone-code = $("#phone-code").val();
-        if(phone-code==""){
-            $(".vg-phone-codep").html("*请输入验证码").fadeIn().delay(2000).fadeOut();
+        var phone_code = $("#phone-code").val();
+        $(".vg-phone-codep").html("*请输入验证码").fadeOut();
+        if(phone_code==""){
+            $(".vg-phone-codep").html("*请输入验证码").fadeIn();
             return false;
-        }else if(phone-code!=321){
-            $(".vg-phone-codep").html("*您输入的验证码不正确").fadeIn().delay(2000).fadeOut();
+        }else if(phone_code!=321){
+            $(".vg-phone-codep").html("*您输入的验证码不正确").fadeIn();
             return false;
         }
     });
     $("#password").blur(function(){
         var password = $("#password").val();
         var passreg = /^.{6,20}$/;
+        $(".vg-passwordp").html("*请输入您的密码").fadeOut();
         if(password==""){
-            $(".vg-passwordp").html("*请输入您的密码").fadeIn().delay(2000).fadeOut();
+            $(".vg-passwordp").html("*请输入您的密码").fadeIn();
             return false;
         }else if(!passreg.test(password)){
-            $(".vg-passwordp").html("*请输入长度为6-20位的密码").fadeIn().delay(2000).fadeOut();
+            $(".vg-passwordp").html("*请输入长度为6-20位的密码").fadeIn();
             return false;
         }
     });
     $("#password-confirmation").blur(function(){
         var password = $("#password").val();
-        var password-confirmation = $("#password-confirmation").val();
-        if(password!=password-confirmation){
-            $(".vg-password-confirmationp").html("*您输入的两次密码不一致").fadeIn().delay(2000).fadeOut();
+        var password_confirmation = $("#password-confirmation").val();
+        $(".vg-password-confirmationp").html("*您输入的两次密码不一致").fadeOut();
+        if(password!=password_confirmation){
+            $(".vg-password-confirmationp").html("*您输入的两次密码不一致").fadeIn();
             return false;
         }
     });
     $("#to-register").on("click",function () {
         var userid = $("#userid").val();
         var phone = $("#phone").val();
-        var phone-code = $("#phone-code").val();
+        var phone_code = $("#phone-code").val();
         var password = $("#password").val();
-        var password-confirmation = $("#password-confirmation").val();
-        var agree-protocol = $("#agree-protocol");
+        var password_confirmation = $("#password-confirmation").val();
+        var agree_protocol = $("#agree-protocol");
         var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
         var userreg = /^[\u4E00-\u9FA5A-Za-z0-9-]+$/;
         var passreg = /^.{6,20}$/;
         var userlength = /^.{4,12}$/;
         if(userid==""){
+            $("#userid").focus();
             $(".vg-useridp").html("*请填写用户名").fadeIn().delay(2000).fadeOut();
             return false;
         }else if(!userreg.test(userid)){
+            $("#userid").focus();
             $(".vg-useridp").html("*用户名不能包含特殊字符").fadeIn().delay(2000).fadeOut();
             return false;
         }else if(!userlength.test(userid)){
+            $("#userid").focus();
             $(".vg-useridp").html("*长度最短4个字符，不能超过14个字符").fadeIn().delay(2000).fadeOut();
             return false;
         }else if(phone==""){
+            $("#phone").focus();
             $(".vg-phonep").html("*请输入手机号  ").fadeIn().delay(2000).fadeOut();
             return false;
         }else if(!phonereg.test(phone)){
+            $("#phone").focus();
             $(".vg-phonep").html("*手机号格式不正确").fadeIn().delay(2000).fadeOut();
             return false;
-        }else if(phone-code==""){
+        }else if(phone_code==""){
+            $("#phone-code").focus();
             $(".vg-phone-codep").html("*请输入验证码").fadeIn().delay(2000).fadeOut();
             return false;
-        }else if(phone-code!=321){
+        }else if(phone_code!=321){
+            $("#phone-code").focus();
             $(".vg-phone-codep").html("*您输入的验证码不正确").fadeIn().delay(2000).fadeOut();
             return false;
         }else if(password==""){
+            $("#password").focus();
             $(".vg-passwordp").html("*请输入您的密码").fadeIn().delay(2000).fadeOut();
             return false;
         }else if(!passreg.test(password)){
+            $("#password").focus();
             $(".vg-passwordp").html("*请输入长度为6-20位的密码").fadeIn().delay(2000).fadeOut();
             return false;
-        }else if(password!=password-confirmation){
+        }else if(password!=password_confirmation){
+            $("#password-confirmation").focus();
             $(".vg-password-confirmationp").html("*您输入的两次密码不一致").fadeIn().delay(2000).fadeOut();
             return false;
-        }else if(!agree-protocol.is(':checked')){
+        }else if(!agree_protocol.is(':checked')){
             $(".vg-agree-protocolp").fadeIn().delay(2000).fadeOut();
             return false;
         }
@@ -214,14 +229,14 @@
                 data:{ "mobile": phone},
                 success:function (res) {
                     var time = 60;
-                    var phone-send = $("#phone-send");
-                    phone-send.addClass("phone-down");
+                    var phone_send = $("#phone-send");
+                    phone_send.addClass("vg-phone-down");
                     var set = setInterval(function() {
                         time--;
-                        phone-send.html(time+"s重新发送");
+                        phone_send.html(time+"s重新发送");
                         if(time == 0) {
                             a=0;
-                            phone-send.removeClass("phone-down").html("发送验证码");
+                            phone_send.removeClass("vg-phone-down").html("发送验证码");
                             clearInterval(set);
                         }
                     }, 1000);

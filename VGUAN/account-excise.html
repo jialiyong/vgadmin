@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>微观传播</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/accountinfo.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./lib/alifont/iconfont.css">
+</head>
+<body>
+<div class="layouttop">
+    <div class="container">
+        <div class="vg-header">
+            <div class="vg-header-logo fl">
+                <a href="#">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="vg-header-right fr">
+                <div class="vg-header-phone fl">
+                    <span>客服电话：</span>
+                    <span>400-890-617</span>
+                </div>
+                <div class="vg-header-account fr">
+                    <a href="#" class="layui-btn layui-btn-danger  layui-btn-small">我的账户</a>
+                    <a href="#" class="">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="shim">
+        <div class="vg-body">
+            <div class="vg-aside">
+                <div class="vg-aside-accountnum">
+                    <div class="vg-aside-accountnum-title">
+                        <div class="cir"></div>
+                        <h3>账号信息</h3>
+                    </div>
+                    <div class="vg-aside-accountnum-main">
+                        <div class="vg-aside-accountnum-main-user">
+                            <span class="icon iconfont icon-geren2"></span>
+                            <span>用户名：</span>
+                            <span>jdjdjdj</span>
+                        </div>
+                        <div class="vg-aside-accountnum-main-phone">
+                            <span class="icon iconfont icon-shouji"></span>
+                            <span>手机号：</span>
+                            <span>13966666666</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr" id="resetphone">更换手机号</a>
+                        </div>
+                        <div class="vg-aside-accountnum-main-idcard">
+                            <span class="icon iconfont icon-shenfenzheng"></span>
+                            <span>身份验证：</span>
+                            <span>未完成</span>
+                            <a href="#"  class="layui-btn layui-btn-primary layui-btn-mini fr">去验证</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vg-aside-account">
+                    <div class="vg-aside-account-title">
+                        <div class="cir"></div>
+                        <h3>账户管理</h3>
+                    </div>
+                    <div class="vg-aside-account-classify">
+                        <li><a href=""><span class="icon iconfont icon-zhanghuzonglan"></span>账户总览</a></li>
+                        <li><a href=""><span class="icon iconfont icon-guanliwodetaocan"></span>套餐管理</a></li>
+                        <li><a href=""><span class="icon iconfont icon-zhanghuchongzhi"></span>账户充值</a></li>
+                        <li><a href=""><span class="icon iconfont icon-iconfonttongji"></span>直播统计</a></li>
+                        <li><a  class="listactive"  href=""><span class="listactive icon iconfont icon-xiaofeijilu"></span>消费记录</a></li>
+                        <li><a href=""><span class="icon iconfont icon-dashangjilu"></span>打赏记录</a></li>
+                        <li><a href=""><span class="icon iconfont icon-zijinliushui-xianjinxiangqing-daohangzhuanzhang"></span>资金流水</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="vg-act-credit">
+                <div class="vg-act-credit-main">
+                    <div class="vg-act-credit-main-title">
+                        <div class="vg-act-credit-main-title-list">
+                            <div class="vg-act-credit-main-title-list-ico">
+                                <span class="icon iconfont icon-chongzhi"></span>
+                                <p>消费记录</p>
+                            </div>
+
+                        </div>
+                        <div class="vg-act-credit-main-title-addlive">
+                            <a href="#">
+                                <div class="vg-act-credit-main-title-addlive-ico">
+                                    <span class="icon iconfont icon-zhibo"></span>
+                                    <p>直播列表</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="vg-act-excise-main-body">
+                        <div class='vg-tabs3' id="vgtabs3">
+                            <ul class='horizontal'>
+                                <li rel="tab-1"  class="selectActive">分钟消费记录</li>
+                                <li rel="tab-2" >现金交易记录</li>
+                            </ul>
+                            <div rel='tab-1' class="tab-1">
+                                <div class="serchbox">
+                                        <input class="layui-input" placeholder="开始日" id="MLAY_demorange_s">-<input class="layui-input" placeholder="截止日" id="MLAY_demorange_e">
+                                        <a id="msearch" class="layui-btn layui-btn-danger"> 搜索</a>
+                                    <a id="mexport" class="layui-btn layui-btn-danger"><span class="icon iconfont icon-daochu"></span> 导出数据</a>
+                                </div>
+                                <div class="minutes-record">
+                                    <table class="layui-table">
+                                        <colgroup>
+                                            <col width="150">
+                                            <col width="150">
+                                            <col width="100">
+                                            <col width="100">
+                                            <col width="170">
+                                            <col width="300">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>直播标题</th>
+                                            <th>消费时间</th>
+                                            <th>剩余时间</th>
+                                            <th>交易时间</th>
+                                            <th>交易明细</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1222222222222</td>
+                                            <td>2016-11-29</td>
+                                            <td>2016</td>
+                                            <td>201633</td>
+                                            <td>2016-11-29/8:35</td>
+                                            <td>人生就像是人生就像是一场修行人生就像是一场像行</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div rel='tab-2' class="tab-2">
+                                <div class="serchbox">
+                                    <input class="layui-input" placeholder="开始日" id="MNLAY_demorange_s">-<input class="layui-input" placeholder="截止日" id="MNLAY_demorange_e">
+                                    <a id="mnsearch"  class="layui-btn layui-btn-danger"> 搜索</a>
+                                    <a id="mnexport" class="layui-btn layui-btn-danger"><span class="icon iconfont icon-daochu"></span> 导出数据</a>
+                                </div>
+                                <div class="money-record">
+                                    <table class="layui-table">
+                                        <colgroup>
+                                            <col width="120">
+                                            <col width="150">
+                                            <col width="100">
+                                            <col width="100">
+                                            <col width="170">
+                                            <col width="300">
+                                        </colgroup>
+                                        <thead>
+                                        <tr>
+                                            <th>订单号</th>
+                                            <th>直播标题</th>
+                                            <th>交易金额</th>
+                                            <th>账户余额</th>
+                                            <th>交易时间</th>
+                                            <th>交易明细</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1222222222222</td>
+                                            <td>2016-11-29</td>
+                                            <td>2016</td>
+                                            <td>201633</td>
+                                            <td>2016-11-29/8:35</td>
+                                            <td>人生就像是人生就像是一场修行人生就像是一场像行</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!--<div style="border-bottom: 1px solid #b6b6b6;width: 320px;float: left"></div>-->
+    <div style="border-bottom: 1px solid #3dc4c9;width: 880px;margin-left: 321px;"></div>
+</div>
+<div class="layoutbom">
+    <div class="container">
+
+        <div style="height: 130px;">
+
+        </div>
+    </div>
+</div>
+</body>
+<!--更换手机弹出窗-->
+<div class="phonemask">
+    <div class="phonebox">
+        <div class="phoneboxtitle">
+            <p>更换手机号</p>
+            <span id="closerplcphone">&times;</span>
+        </div>
+        <div class="phoneboxmain">
+            <form class="layui-form" action="">
+                <div class="">
+                    <label class="">您当前的手机号：</label>
+                    <div class="layui-input-inline">
+                        <p>132531396400</p>
+                    </div>
+                </div>
+                <div class="newphone">
+                    <p>请输入您的新号码：</p>
+                    <input type="text" id="newphone" class="layui-input">
+                    <p class="newphonered">*请输入正确的手机号码！</p>
+                </div>
+                <div class="code">
+                    <p>请输入验证码:</p>
+                    <input type="text" id="phonecode" class="layui-input">
+                    <a href="javascript:;" id="phone-send" class="phone-send">发送验证码</a>
+                    <p class="codered">*请输入验证码</p>
+                </div>
+                <div class="phoneboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="phonemarsubkbtn">提交</button>
+                    <button class="layui-btn layui-btn-primary" id="closerplcphonebtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--密码修改-->
+<div class="passmask">
+    <div class="passbox">
+        <div class="passboxtitle">
+            <p>修改密码</p>
+            <span id="closerplcpass">&times;</span>
+        </div>
+        <div class="passboxmain">
+            <form action="">
+                <div class="nowpass">
+                    <p>请输入您的旧密码：</p>
+                    <input type="password" id="nowpass" class="layui-input">
+                    <p class="nowpassred">*请输入旧密码！</p>
+                </div>
+                <div class="newpass">
+                    <p>请输入您的新密码：</p>
+                    <input type="password" id="newpass" class="layui-input">
+                    <p class="newpassred">*请输入新密码！</p>
+                </div>
+                <div class="tonewpass">
+                    <p>请确认您的新密码：</p>
+                    <input type="password" id="tonewpass" class="layui-input">
+                    <p class="tonewpassred">*请再次输入新密码！</p>
+                </div>
+                <div class="passboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="passsubbtn">确认</button>
+                    <button class="layui-btn layui-btn-primary" id="closepassbtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/layui/lay/dest/layui.all.js"></script>
+<script src="./js/tabs.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+
+<script>
+    //初始化tab
+     tabs_takes.init("vgtabs3");
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        var start = {
+//            min: laydate.now()
+            max: '2099-06-16 23:59:59'
+            ,istoday: false
+            ,choose: function(datas){
+                end.min = datas; //开始日选好后，重置结束日的最小日期
+                end.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+
+        var end = {
+            min: laydate.now()
+            ,max: '2099-06-16 23:59:59'
+            ,istoday: false
+            ,choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+
+        document.getElementById('MLAY_demorange_s').onclick = function(){
+            start.elem = this;
+            laydate(start);
+        }
+        document.getElementById('MLAY_demorange_e').onclick = function(){
+            end.elem = this
+            laydate(end);
+        }
+
+
+    });
+    layui.use('laydate', function(){
+        var laydate1 = layui.laydate;
+
+        var start1 = {
+//            min: laydate.now()
+            max: '2099-06-16 23:59:59'
+            ,istoday: false
+            ,choose: function(datas){
+                end1.min = datas; //开始日选好后，重置结束日的最小日期
+                end1.start = datas //将结束日的初始值设定为开始日
+            }
+        };
+
+        var end1 = {
+            min: laydate1.now()
+            ,max: '2099-06-16 23:59:59'
+            ,istoday: false
+            ,choose: function(datas){
+                start.max = datas; //结束日选好后，重置开始日的最大日期
+            }
+        };
+        document.getElementById('MNLAY_demorange_s').onclick = function(){
+            start1.elem = this;
+            laydate1(start1);
+        }
+        document.getElementById('MNLAY_demorange_e').onclick = function(){
+            end1.elem = this
+            laydate1(end1);
+        }
+
+
+    });
+</script>
+</html>

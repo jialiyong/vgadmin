@@ -137,7 +137,7 @@
                                        </a>
                                    </div>
                                </div>
-                               <div class="chatbox">
+                               <div class="chatbox" id="chatbox">
                                    <li class="vg-comment">
                                        <img src=".." alt="" class="vg-headportrait">
                                        <div class="vg-comment-info">
@@ -264,7 +264,7 @@
                                        <div>
                                            <textarea id="publish-input" class="textarea" placeholder="我也说一句" data-reactid=".1.3"></textarea>
                                            <div class="vg-toolsbox">
-                                               <a href="#" class="btnsend">发 送</a>
+                                               <a href="javascript:;" class="btnsend">发 送</a>
                                            </div>
                                        </div>
                                    </div>
@@ -415,3 +415,19 @@
 <script src="./lib/layui/lay/dest/layui.all.js"></script>
 <script type="text/javascript" src="./js/controler.js"></script>
 </html>
+<script>
+    $(".btnsend").on("click",function () {
+       $(".chatbox").append("<li class='vg-comment'>"+
+        "<img src='..'  class='vg-headportrait'>"+
+            "<div class='vg-comment-info'>"+
+            "<span class='vg-nick'>点点滴滴</span>"+
+            "<span class='vg-time'>2012-5-5</span>"+
+            "<div class='vg-content'>"+
+            "<div>sdasdfsadddddddd顶顶顶手动阀士大夫士大夫士大夫fsdddd申诉fsfas</div>"+
+            "</div>"+
+            "</div>"+
+            "</li>");
+            var div = document.getElementById('chatbox');
+            div.scrollTop = div.scrollHeight;
+    })
+</script>

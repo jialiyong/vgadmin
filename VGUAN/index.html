@@ -53,7 +53,7 @@
                                <span class="icon iconfont icon-shouji"></span>
                                <span>手机号：</span>
                                <span>13966666666</span>
-                               <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr" id="resetphone">更换手机号</a>
+                               <a href="javascript:;" class="layui-btn layui-btn-primary layui-btn-mini fr"  id="resetphone">更换手机号</a>
                            </div>
                            <div class="vg-aside-accountnum-main-idcard">
                                <span class="icon iconfont icon-shenfenzheng"></span>
@@ -116,13 +116,17 @@
                        <div class="vg-index-main-title">
                            <div class="vg-index-main-title-list">
                                <div class="vg-index-main-title-list-ico">
+                                   <span class="icon iconfont icon-zhibo1"></span>
+                                   <p>直播列表</p>
                                </div>
-                               <p>直播列表</p>
+
                            </div>
                            <div class="vg-index-main-title-addlive">
                                <a href="#">
-                                   <div class="vg-index-main-title-addlive-ico"></div>
-                                   <p>创建直播</p>
+                                   <div class="vg-index-main-title-addlive-ico">
+                                       <span class="icon iconfont icon-16pxtianjia"></span>
+                                       <p>创建直播</p>
+                                   </div>
                                </a>
                            </div>
                        </div>
@@ -154,7 +158,7 @@
     </div>
 </body>
 <!--更换手机弹出窗-->
-<div class="phonemark">
+<div class="phonemask">
     <div class="phonebox">
         <div class="phoneboxtitle">
             <p>更换手机号</p>
@@ -188,7 +192,7 @@
     </div>
 </div>
 <!--密码修改-->
-<div class="passmark">
+<div class="passmask">
     <div class="passbox">
         <div class="passboxtitle">
             <p>修改密码</p>
@@ -223,5 +227,20 @@
 <script src="./lib/layui/lay/dest/layui.all.js"></script>
 <script type="text/javascript" src="./js/index.js"></script>
 
-
+<script>
+    layer.confirm('为保证直播质量，您需要验证身份后才可创建直播。是否去验证身份？', {
+        title: '提示',
+        btn: ['确认','取消'],
+        btnAlign: 'c',
+        skin: 'prompt-btnclass'
+    }, function(){
+        location.href="./idinfo.html"
+    });
+    layer.confirm('修改成功！', {
+        title: '提示',
+        btn: ['确认'],
+        btnAlign: 'c',
+        skin: 'prompt-btnclass'
+    });
+</script>
 </html>

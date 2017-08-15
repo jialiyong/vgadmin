@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>微观传播</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/accountinfo.css">
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./lib/alifont/iconfont.css">
+</head>
+<body>
+<div class="layouttop">
+    <div class="container">
+        <div class="vg-header">
+            <div class="vg-header-logo fl">
+                <a href="#">
+                    <img src="./images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="vg-header-right fr">
+                <div class="vg-header-phone fl">
+                    <span>客服电话：</span>
+                    <span>400-890-617</span>
+                </div>
+                <div class="vg-header-account fr">
+                    <a href="#" class="layui-btn layui-btn-danger  layui-btn-small">我的账户</a>
+                    <a href="#" class="">退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="shim">
+        <div class="vg-body">
+            <div class="vg-aside">
+                <div class="vg-aside-accountnum">
+                    <div class="vg-aside-accountnum-title">
+                        <div class="cir"></div>
+                        <h3>账号信息</h3>
+                    </div>
+                    <div class="vg-aside-accountnum-main">
+                        <div class="vg-aside-accountnum-main-user">
+                            <span class="icon iconfont icon-geren2"></span>
+                            <span>用户名：</span>
+                            <span>jdjdjdj</span>
+                        </div>
+                        <div class="vg-aside-accountnum-main-phone">
+                            <span class="icon iconfont icon-shouji"></span>
+                            <span>手机号：</span>
+                            <span>13966666666</span>
+                            <a href="#" class="layui-btn layui-btn-primary layui-btn-mini fr" id="resetphone">更换手机号</a>
+                        </div>
+                        <div class="vg-aside-accountnum-main-idcard">
+                            <span class="icon iconfont icon-shenfenzheng"></span>
+                            <span>身份验证：</span>
+                            <span>未完成</span>
+                            <a href="#"  class="layui-btn layui-btn-primary layui-btn-mini fr">去验证</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vg-aside-account">
+                    <div class="vg-aside-account-title">
+                        <div class="cir"></div>
+                        <h3>账户管理</h3>
+                    </div>
+                    <div class="vg-aside-account-classify">
+                        <li><a href=""><span class="icon iconfont icon-zhanghuzonglan"></span>账户总览</a></li>
+                        <li><a   class="listactive"  href=""><span class="listactive icon iconfont icon-guanliwodetaocan"></span>套餐管理</a></li>
+                        <li><a href=""><span class="icon iconfont icon-zhanghuchongzhi"></span>账户充值</a></li>
+                        <li><a href=""><span class="icon iconfont icon-iconfonttongji"></span>直播统计</a></li>
+                        <li><a href=""><span class=" icon iconfont icon-xiaofeijilu"></span>消费记录</a></li>
+                        <li><a href=""><span class="icon iconfont icon-dashangjilu"></span>打赏记录</a></li>
+                        <li><a href=""><span class="icon iconfont icon-zijinliushui-xianjinxiangqing-daohangzhuanzhang"></span>资金流水</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="vg-act-packagebuy">
+                <div class="vg-act-packagebuy-main">
+                    <div class="vg-act-packagebuy-main-title">
+                        <div class="vg-act-packagebuy-main-title-list">
+                            <div class="vg-act-packagebuy-main-title-list-ico">
+                                <span class="icon iconfont icon-dashangjilu"></span>
+                                <p>套餐购买</p>
+                            </div>
+
+                        </div>
+                        <div class="vg-act-packagebuy-main-title-addlive">
+                            <a href="#">
+                                <div class="vg-act-packagebuy-main-title-addlive-ico">
+                                    <span class="icon iconfont icon-zhibo"></span>
+                                    <p>直播列表</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="vg-act-packagebuy-main-body">
+                        <div class="title">
+                            <span class="icon iconfont icon-zhanghuyue"></span>
+                            <span>账户余额：</span>
+                            <span>0.00</span>
+                            <span>元</span>
+                        </div>
+                        <div class="packagetype">
+                            <p>您选择的套餐为：<span>A套餐</span></p>
+                            <p>应付金额为：<span>1222</span><span>元</span></p>
+                        </div>
+                        <div class="packageform">
+                            <form class="layui-form" action="">
+                                <p class="type">请选择支付方式</p>
+                                <div class="typebox">
+                                    <span class="wxradio"><input type="radio" name="paytype" value="wx" title="微信支付" checked=""></span>
+                                    <span class="zzradio"> <input type="radio" name="paytype" value="zz" title="对公转账"></span>
+                                </div>
+                                <div class="wxpay">
+                                    <button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="*">立即支付</button>
+                                </div>
+                                <div class="zzpay">
+                                    <p>户名:   北京微观传播网络科技有限公司</p>
+                                    <p>账号：  1105 0167 5200 0000 0084</p>
+                                    <p>开户银行：  中国建设银行股份有限公司北京永安里支行</p>
+                                    <input id="imgurl" type="text" placeholder="请上传转账交易账号" autocomplete="off" class="layui-input">
+                                    <button class="layui-btn layui-btn-danger" lay-submit="" lay-filter="*">上传</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!--<div style="border-bottom: 1px solid #b6b6b6;width: 320px;float: left"></div>-->
+    <div style="border-bottom: 1px solid #3dc4c9;width: 880px;margin-left: 321px;"></div>
+</div>
+<div class="layoutbom">
+    <div class="container">
+
+        <div style="height: 130px;">
+
+        </div>
+    </div>
+</div>
+</body>
+<!--更换手机弹出窗-->
+<div class="phonemask">
+    <div class="phonebox">
+        <div class="phoneboxtitle">
+            <p>更换手机号</p>
+            <span id="closerplcphone">&times;</span>
+        </div>
+        <div class="phoneboxmain">
+            <form class="layui-form" action="">
+                <div class="">
+                    <label class="">您当前的手机号：</label>
+                    <div class="layui-input-inline">
+                        <p>132531396400</p>
+                    </div>
+                </div>
+                <div class="newphone">
+                    <p>请输入您的新号码：</p>
+                    <input type="text" id="newphone" class="layui-input">
+                    <p class="newphonered">*请输入正确的手机号码！</p>
+                </div>
+                <div class="code">
+                    <p>请输入验证码:</p>
+                    <input type="text" id="phonecode" class="layui-input">
+                    <a href="javascript:;" id="phone-send" class="phone-send">发送验证码</a>
+                    <p class="codered">*请输入验证码</p>
+                </div>
+                <div class="phoneboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="phonemarsubkbtn">提交</button>
+                    <button class="layui-btn layui-btn-primary" id="closerplcphonebtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--密码修改-->
+<div class="passmask">
+    <div class="passbox">
+        <div class="passboxtitle">
+            <p>修改密码</p>
+            <span id="closerplcpass">&times;</span>
+        </div>
+        <div class="passboxmain">
+            <form action="">
+                <div class="nowpass">
+                    <p>请输入您的旧密码：</p>
+                    <input type="password" id="nowpass" class="layui-input">
+                    <p class="nowpassred">*请输入旧密码！</p>
+                </div>
+                <div class="newpass">
+                    <p>请输入您的新密码：</p>
+                    <input type="password" id="newpass" class="layui-input">
+                    <p class="newpassred">*请输入新密码！</p>
+                </div>
+                <div class="tonewpass">
+                    <p>请确认您的新密码：</p>
+                    <input type="password" id="tonewpass" class="layui-input">
+                    <p class="tonewpassred">*请再次输入新密码！</p>
+                </div>
+                <div class="passboxbtn">
+                    <button class="layui-btn layui-btn-danger" id="passsubbtn">确认</button>
+                    <button class="layui-btn layui-btn-primary" id="closepassbtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/layui/lay/dest/layui.all.js"></script>
+<script src="./js/tabs.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+
+<script>
+
+    $(".wxradio").on("click",".layui-form-radio",function () {
+        $(".wxpay").show();
+        $(".zzpay").hide();
+
+    })
+    $(".zzradio").on("click",".layui-form-radio",function () {
+        $(".wxpay").hide();
+        $(".zzpay").show();
+    })
+</script>
+</html>

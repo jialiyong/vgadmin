@@ -173,3 +173,455 @@ a {
 .vg-footer .vg-footerbottom{
     text-align: center;
 }
+/*更换手机弹出窗*/
+.phonemask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+    font-size: 16px;
+}
+.phonemask p{
+    display: inline-block;
+}
+.phonemask .layui-input{
+    display: inline-block;
+}
+.phonemask a{
+    display: inline-block;
+}
+.phonemask .phonebox{
+    width: 470px;
+    height: 365px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    border-radius: 4px;
+    margin-left: -235px;
+    top: 200px;
+
+}
+.phonemask .phonebox .phoneboxtitle{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 30px;
+    background: burlywood;
+}
+
+.phonemask .phonebox .phoneboxtitle p{
+
+}
+.phonemask .phonebox .phoneboxtitle span{
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+}
+.phonemask .phonebox .phoneboxmain{
+    padding:40px 0 20px 30px;
+}
+
+.phonemask .phonebox .phoneboxmain .nowphone{
+
+}
+.phonemask .phonebox .phoneboxmain .newphone{
+    position: relative;
+    margin-top: 45px;
+}
+.phonemask .phonebox .phoneboxmain .newphone .newphonered{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:160px;
+}
+.phonemask .phonebox .phoneboxmain .newphone input{
+    width: 215px;
+    height: 30px;
+}
+.phonemask .phonebox .phoneboxmain .code{
+    margin-top: 45px;
+    position: relative;
+}
+.phonemask .phonebox .phoneboxmain .code .codered{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.phonemask .phonebox .phoneboxmain .code input{
+    width: 105px;
+    height: 30px;
+}
+.phonemask .phonebox .phoneboxmain .code .phone-send{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 35px;
+    margin-left: 30px;
+    background-color: #f60;
+    opacity: 0.6;
+    color: #fff;
+}
+.phonemask .phonebox .phoneboxmain .phoneboxbtn{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.phonemask .phonebox .phoneboxmain .phoneboxbtn .layui-btn{
+    margin-right: 50px;
+}
+.phonemask .phonebox .phoneboxmain .code .vg-phone-down{
+    background: #c8c8c8;
+    color: #4d4d4d;
+    cursor: not-allowed;
+}
+    /*修改密码弹出窗*/
+.passmask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+}
+.passmask p{
+    display: inline-block;
+}
+.passmask .passbox{
+    width: 470px;
+    height: 365px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    margin-left: -235px;
+    top: 200px;
+
+}
+.passmask .passbox .passboxtitle{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 30px;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.passmask .passbox .passboxtitle p{
+    font-size: 16px;
+}
+.passmask .passbox .passboxtitle span{
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+.passmask .passbox .passboxmain{
+    padding:40px 0 20px 30px;
+}
+.passmask .passbox .passboxmain input{
+    width: 210px;
+    height: 25px;
+}
+.passmask .passbox .passboxmain .nowpass{
+    position: relative;
+}
+.passmask .passbox .passboxmain .nowpass .nowpassred{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.passmask .passbox .passboxmain .newpass{
+    margin-top: 45px;
+    position: relative;
+}
+.passmask .passbox .passboxmain .newpass .newpassred{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.passmask .passbox .passboxmain .tonewpass{
+    margin-top: 45px;
+    position: relative;
+}
+.passmask .passbox .passboxmain .tonewpass .tonewpassred{
+    display: none;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top:43px;
+    left:110px;
+}
+.passmask .passbox .passboxmain .passboxbtn{
+    margin-top: 45px;
+    text-align: center;
+}
+.passmask .passbox .passboxmain .passboxbtn #passsubbtn{
+    margin-right: 80px;
+}
+.passmask input{
+    display: inline-block;
+}
+/*提现申请弹出窗*/
+.applymask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+}
+.applymask .title>p{
+    display: inline-block;
+}
+.applymask .box{
+    width: 460px;
+    height: 560px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    margin-left: -235px;
+    top: 200px;
+
+}
+.applymask .box .title{
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 30px;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.applymask .box .title p{
+    font-size: 16px;
+}
+.applymask .box .title span{
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+.applymask .box .main {
+    /*text-align: center;*/
+}
+.applymask .box .main>p{
+    text-align: center;
+    color: #ff7a21;
+    margin-top: 16px;
+}
+.applymask .box .main form input{
+    display: inline-block;
+}
+.applymask .box .main .username{
+    margin-top: 25px;
+    text-align: right;
+    padding-right: 70px;
+}
+.applymask .box .main .username input{
+    width: 235px;
+}
+.applymask .box .main .phone{
+    margin-top: 18px;
+    text-align: right;
+    padding-right: 70px;
+}
+.applymask .box .main .phone input{
+    width: 235px;
+}
+.applymask .box .main .bankcard{
+    margin-top: 18px;
+    text-align: right;
+    padding-right: 70px;
+}
+.applymask .box .main .bankcard input{
+    width: 235px;
+}
+.applymask .box .main .bank{
+    margin-top: 18px;
+    text-align: right;
+    padding-right: 70px;
+}
+.applymask .box .main .bank input{
+    width: 235px;
+}
+.applymask .box .main .bank{
+    margin-top: 18px;
+    text-align: right;
+    padding-right: 70px;
+}
+.applymask .box .main .bank input{
+    width: 235px;
+}
+.applymask .box .main .money{
+    margin-top: 18px;
+    text-align: right;
+    padding-right: 185px;
+    position: relative;
+}
+.applymask .box .main .money input{
+    width: 121px;
+    padding-left: 25px;
+}
+
+.applymask .box .main .money .rmb{
+    position: absolute;
+    top: 10px;
+    left: 160px;
+}
+.applymask .box .main .money div{
+    position: absolute;
+    top: 2px;
+    right: 70px;
+}
+.applymask .box .main .money div span{
+    font-size: 10px;
+}
+.applymask .box .main .money a{
+    position: absolute;
+    top: 20px;
+    right: 85px;
+    font-size: 10px;
+    color:blue ;
+}
+.applymask .box .main .poundage{
+    text-align: center;
+    margin-top: 15px;
+    color: red;
+    font-size: 12px;
+}
+.applymask .box .main .protocol{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+ }
+
+.applymask .box .main .protocol input{
+    display: none;
+}
+.applymask .box .main .protocol a{
+    color: blue;
+}
+.applymask .box .main .btn{
+    text-align: center;
+    margin-top: 30px;
+}
+.applymask .box .main .btn a:first-child{
+    width: 105px;
+    height: 40px;
+    background-color: #ff7a21;
+    line-height: 40px;
+    margin-right: 50px;
+}
+.applymask .box .main .btn a:last-child{
+    width: 105px;
+    height: 40px;
+    line-height: 40px;
+}
+/*skin*/
+body .apply-btnclass .layui-layer-btn0{background:#f60;border-color: #f60;}
+
+
+/*转到余额弹出窗*/
+.tobalancemask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+}
+.tobalancemask .title>p{
+    display: inline-block;
+}
+.tobalancemask .box{
+    width: 440px;
+    height: 276px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    margin-left: -235px;
+    top: 200px;
+
+}
+.tobalancemask .box .title{
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    padding: 0 10px 0 30px;
+    background-color: #eeeeee;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.tobalancemask .box .title p{
+    font-size: 16px;
+}
+.tobalancemask .box .title span{
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+.tobalancemask .box .intbox{
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+.tobalancemask .box .intbox input{
+    display: inline-block;
+    width: 132px;
+    padding-left: 25px;
+}
+.tobalancemask .box .intbox .rmb{
+    position: absolute;
+    top: 10px;
+    left: 190px;
+}
+.tobalancemask .box .balancebox{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.tobalancemask .box .balancebox span{
+    color: #999;
+}.tobalancemask .box .balancebox a{
+     color: #0018ff;
+ }
+
+.tobalancemask .box .balanceprotocol{
+    margin-top: 24px;
+    text-align: center;
+}
+
+.tobalancemask .box .balanceprotocol a{
+    color: blue;
+}
+
+.tobalancemask .box .btn{
+    margin-top: 25px;
+    text-align: center;
+}
+.tobalancemask .box .btn a:first-child{
+    height: 38px;
+    line-height: 38px;
+    background-color: #ff7a21;
+}
+
+
